@@ -7,7 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-function Screen1({  }) {
+function Screen1({ }) {
+    console.log(navigate)
     return (
 
         <View>
@@ -21,7 +22,7 @@ function Screen1({  }) {
 
             <Button
                 title="go to screen2"
-                onPress={() => this.props.navigation.navigate("s2")}
+                onPress={() => navigation.navigate("s2")}
             />
         </View>
     );

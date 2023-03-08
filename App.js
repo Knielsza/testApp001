@@ -9,6 +9,7 @@ import Screen2 from "./components/Screen2.js"
 const Stack = createNativeStackNavigator();
 
 function App({ navigation }) {
+  console.log(navigate)
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <NavigationContainer>
@@ -21,7 +22,7 @@ function App({ navigation }) {
       </NavigationContainer>
       <Button
         title="go to screen2"
-        onPress={() => this.props.navigation.navigate("s2")}
+        onPress={() => navigation.navigate("s2")}
       />
     </View>
   );
