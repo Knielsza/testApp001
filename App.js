@@ -2,22 +2,28 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Screen1 from "./components/Screen1"
-import Screen2 from "./components/Screen2"
+import { Button, StyleSheet, Text, View } from 'react-native';
+import Screen1 from "./components/Screen1.js"
+import Screen2 from "./components/Screen2.js"
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+function App({ navigation }) {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="s1" component={Screen1} />
-        <Stack.Screen name="s2" component={Screen2} />
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="s1" component={Screen1} />
+          <Stack.Screen name="s2" component={Screen2} />
 
-      </Stack.Navigator>
+        </Stack.Navigator>
 
-    </NavigationContainer>
+      </NavigationContainer>
+      <Button
+        title="go to screen2"
+        onPress={() => this.props.navigation.navigate("s2")}
+      />
+    </View>
   );
 }
 

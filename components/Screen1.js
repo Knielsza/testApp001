@@ -7,18 +7,23 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-function Screen1() {
+function Screen1({  }) {
     return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="s1" component={Screen1} />
-                <Stack.Screen name="s2" component={Screen2} />
-                <Button
-                    title="go to screen2"
-                    onPress={() => this.props.navigation.navigate("s1")}
-                />
-            </Stack.Navigator>
-        </NavigationContainer>
+
+        <View>
+            {/* <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="s1" component={Screen1} />
+                    <Stack.Screen name="s2" component={Screen2} />
+
+                </Stack.Navigator>
+            </NavigationContainer> */}
+
+            <Button
+                title="go to screen2"
+                onPress={() => this.props.navigation.navigate("s2")}
+            />
+        </View>
     );
 }
 
